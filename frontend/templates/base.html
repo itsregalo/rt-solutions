@@ -40,9 +40,9 @@
 
 <body>
 
-    {% comment %} <!-- Preloader Start -->
+    <!-- Preloader Start -->
     <div class="se-pre-con"></div>
-    <!-- Preloader Ends --> {% endcomment %}
+    <!-- Preloader Ends --> 
 
     <!-- Header 
     ============================================= -->
@@ -70,7 +70,7 @@
                         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
                             <i class="fa fa-bars"></i>
                         </button>
-                        <a class="navbar-brand" href="index.html">
+                        <a class="navbar-brand" href="{% url 'core:index' %}">
                             <img src="{% static 'assets/img/logo-light.png' %}" class="logo logo-display" alt="Logo">
                             <img src="{% static 'assets/img/logo.png' %}" class="logo logo-scrolled" alt="Logo">
                         </a>
@@ -81,30 +81,26 @@
                     <div class="collapse navbar-collapse" id="navbar-menu">
                         <ul class="nav navbar-nav navbar-center" data-in="fadeInDown" data-out="fadeOutUp">
                             <li class="dropdown">
-                            <a href="#" class="" >Home</a>
+                            <a href="{% url 'core:index' %}" class="" >Home</a>
                             
                         </li>
                        
                         <li class="dropdown">
-                            <a href="#" class="" data-toggle="dropdown" >Services</a>
+                            <a href="{% url 'core:services' %}" class="" >Services</a>
                             
                         </li>
 
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" >About RT</a>
                             <ul class="dropdown-menu">
-                                <li><a href="about-us.html">About Company</a></li>
-                                <li><a href="why-choose-us.html">Why Choose us</a></li>
-                                <li><a href="team.html">Meet Our Team</a></li>
-                                <li><a href="team-single.html">Team Single</a></li>
-                                <li><a href="contact.html">Get in Touch</a></li>
-                                <li><a href="faq.html">Faq</a></li>
-                                <li><a href="404.html">Error Page</a></li>
+                                <li><a href="{% url 'core:about' %}">About Company</a></li>
+                                <li><a href="{% url 'core:why-us' %}">Why Choose us</a></li>
+                                <li><a href="{% url 'core:faq' %}">Faq</a></li>
                             </ul>
                         </li>
                        
                         <li>
-                            <a href="contact.html">Contact</a>
+                            <a href="{% url 'core:contact' %}">Contact</a>
                         </li>
                         </ul>
                     </div><!-- /.navbar-collapse -->
@@ -158,19 +154,7 @@
                                     <a href="#">About Us</a>
                                 </li>
                                 <li>
-                                    <a href="#">Meet Our Team</a>
-                                </li>
-                                <li>
-                                    <a href="#">News & Media</a>
-                                </li>
-                                <li>
-                                    <a href="#">Case Studies</a>
-                                </li>
-                                <li>
-                                    <a href="#">Contact Us</a>
-                                </li>
-                                <li>
-                                    <a href="#">Investors</a>
+                                    <a href="{% url 'core:contact' %}">Contact Us</a>
                                 </li>
                             </ul>
                         </div>
@@ -216,11 +200,6 @@
                                     </li>
                                 </ul>
                             </div>
-                            <div class="download">
-                                <h5>Download</h5>
-                                <a href="#"><i class="fab fa-apple"></i> App Store</a>
-                                <a href="#"><i class="fab fa-google-play"></i> Google Play</a>
-                            </div>
                         </div>
                     </div>
 
@@ -232,7 +211,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-6">
-                        <p>Copyright &copy;  2020. Designed by <a href="#">validthemes</a></p>
+                        <p>Copyright &copy;  2022. Designed by <a href="#">bradtechnologies</a></p>
                     </div>
                     <div class="col-md-6 text-right link">
                         <ul>
@@ -271,9 +250,9 @@
     <script src="{% static 'assets/js/imagesloaded.pkgd.min.js' %}"></script>
     <script src="{% static 'assets/js/count-to.js' %}"></script>
     <script src="{% static 'assets/js/YTPlayer.min.js' %}"></script>
-    <script src="{% static 'assets/js/jquery.nice-select.min.jss' %}"></script>
-    <script src="{% static 'assets/js/bootsnav.jss' %}"></script>
-    <script src="{% static 'assets/js/main.jss' %}"></script>
+    <script src="{% static 'assets/js/jquery.nice-select.min.js' %}"></script>
+    <script src="{% static 'assets/js/bootsnav.js' %}"></script>
+    <script src="{% static 'assets/js/main.js' %}"></script>
 
 </body>
 </html>

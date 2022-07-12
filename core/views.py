@@ -11,5 +11,14 @@ def Services(request):
 def About(request):
     return render(request, 'about-us.html')
 
+def faq(request):
+    return render(request, 'faq.html')
+
 def Contact(request):
     return render(request, 'contact.html')
+
+def why_us(request):
+    return render(request, 'why-us.html')
+
+def Handle404(request):
+    return render(request, '404.html')
