@@ -1,5 +1,5 @@
 from audioop import reverse
-from django.shortcuts import render
+from django.shortcuts import redirect, render
 from django.http import HttpResponseRedirect
 from .models import Contact
 
@@ -24,9 +24,9 @@ def Contact(request):
         phone = request.POST.get('phone')
         message = request.POST.get('message')
         print(name, email, message)
-        db_contact = Contact(name=name, email=email, phone=phone, message=message)
-        db_contact.save()
-        return HttpResponseRedirect(reverse('core:contact'))
+        # db_contact = Contact(name=name, email=email, phone=phone, message=message)
+        # db_contact.save()
+        return redirect('core:contact')
 
     return render(request, 'contact.html')
 
